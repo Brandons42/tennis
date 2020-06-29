@@ -22,7 +22,15 @@ class ReplayBuffer:
 		self.device = device
 		
 	def add(self, state, action, reward, next_state, done):
-		"""Add a new experience to memory."""
+		"""Add a new experience to memory.
+		Params
+		======
+			state (numpy.ndarray[float]): current environment state
+			action (numpy.ndarray[float]): action to take
+			reward (float): reward for given action in given state
+			next_state (numpy.ndarray[float]): environment state after the given action is taken
+			done (bool): whether the episode has terminated
+		"""
 		e = self.experience(state, action, reward, next_state, done)
 		self.memory.append(e)
 		

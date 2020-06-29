@@ -46,7 +46,15 @@ class Agent():
 		self.t_step = 0
 		
 	def step(self, state, action, reward, next_state, done):
-		"""Save experience in replay memory, and use random sample from buffer to learn."""
+		"""Save experience in replay memory, and use random sample from buffer to learn.
+		Params
+		======
+			state (numpy.ndarray[float]): current environment state
+			action (numpy.ndarray[float]): action to take
+			reward (float): reward for given action in given state
+			next_state (numpy.ndarray[float]): environment state after the given action is taken
+			done (bool): whether the episode has terminated
+		"""
 		# Save experience / reward
 		self.memory.add(state, action, reward, next_state, done)
 
@@ -58,7 +66,13 @@ class Agent():
 			self.learn(experiences, GAMMA)
 
 	def act(self, state, eps, add_noise=True):
-		"""Returns actions for given state as per current policy."""
+		"""Returns actions for given state as per current policy.
+		Params
+		======
+			state (numpy.ndarray[float]): current environment state
+			eps (float): epsilon value for noise generation and random action selection
+			add_noise (bool): whether or not to add noise
+		"""
 		if random.random() < eps:
 			return np.random.randn(self.action_size)
 		else:
@@ -72,6 +86,7 @@ class Agent():
 			return np.clip(action, -1, 1)
 
 	def reset(self):
+		"""Reset noise."""
 		self.noise.reset()
 
 	def learn(self, experiences, gamma):
