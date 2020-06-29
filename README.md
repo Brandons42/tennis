@@ -1,6 +1,5 @@
 [//]: # 'Image References'
 [image1]: https://user-images.githubusercontent.com/10624937/42135623-e770e354-7d12-11e8-998d-29fc74429ca2.gif 'Trained Agent'
-[image2]: https://user-images.githubusercontent.com/10624937/42386929-76f671f0-8106-11e8-9376-f17da2ae852e.png 'Kernel'
 
 # Project 3: Collaboration and Competition
 
@@ -38,34 +37,6 @@ Here is Udacity's description of the project environment:
 
 2. Decompress the file and place it in this repository
 
-3. Create Python environment using Anaconda
+3. Follow steps 1, 4, and 5 from [this repository](https://github.com/udacity/deep-reinforcement-learning)
 
-   - Linux or Mac:
-     `conda create --name drlnd python=3.6 source activate drlnd`
-   - Windows:
-     `conda create --name drlnd python=3.6 activate drlnd`
-
-4. Install dependencies
-
-   Assuming you're at the root of this repository:
-
-   ```
-   cd python
-   pip install .
-   ```
-
-5. Create kernel
-
-   ```
-   python -m ipykernel install --user --name drlnd --display-name "drlnd"
-   ```
-
-6. Open `Tennis.ipynb` and set kernel
-
-![Kernel][image2]
-
-7. Follow the directions in `Tennis.ipynb`
-
-### Instructions
-
-Follow the instructions in `Tennis.ipynb` to get started with training your own agent!
+4. Follow the directions in `Tennis.ipynb`
